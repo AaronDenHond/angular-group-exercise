@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'animalDB';
+  title = 'Zoo of Losers';
+  animalClasses: any = ['Mammal', 'Amphibian', 'Bird', 'Reptiles', 'Insects'];
 }

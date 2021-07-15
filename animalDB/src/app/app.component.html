@@ -1,5 +1,5 @@
 <div class="container">
-  <h3 class="app-title">Friend application</h3>
+  <h3 class="app-title">Zoo of Losers</h3>
 
   <form>
     <div class="mb-3">
@@ -26,8 +26,17 @@
     </div>
 
     <div class="mb-3">
-      <label class="form-label">Class</label><br />
-      <input type="text" name="class" class="form-control" />
+      <label class="form-label">class</label>
+      <select
+        class="form-select"
+        name="animalClass"
+        id="animalClass"
+        name="animalClass"
+      >
+        <option *ngFor="let animalClass of animalClasses">
+          {{ animalClass }}
+        </option>
+      </select>
     </div>
 
     <div class="mb-3">
