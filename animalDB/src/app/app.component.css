@@ -46,3 +46,8 @@ h3.list-title {
   text-align: center;
   margin-top: 30px;
 }
+
+.zoo-image {
+  height: 200px;
+  width: 280px;
+}
