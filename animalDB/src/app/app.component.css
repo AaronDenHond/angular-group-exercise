@@ -1,0 +1,48 @@
+.container {
+  width: 300px;
+  margin-top: 50px;
+  margin-left: 20px;
+  text-align: left;
+  background-color: whitesmoke;
+  border: 1px solid grey;
+  border-radius: 5px;
+  float: left;
+}
+
+.app-title {
+  margin: 20px;
+}
+
+.error {
+  border-color: red;
+}
+
+button {
+  text-align: center;
+}
+
+.friends-box {
+  margin-left: 50px;
+}
+
+.friends-flex {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.friend {
+  margin-bottom: 25px;
+  margin-left: 25px;
+  border: 2px solid aliceblue;
+  border-radius: 5px;
+  padding: 15px;
+  width: 280px;
+  height: 200px;
+  box-shadow: 2px 5px aliceblue;
+}
+
+h3.list-title {
+  text-align: center;
+  margin-top: 30px;
+}
