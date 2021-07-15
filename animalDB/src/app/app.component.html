@@ -13,6 +13,9 @@
           src="https://d2lv662meabn0u.cloudfront.net/boomerang/dynamic/show/00000000/988/5e40a28bfc21629a2b42073994667591498da014_1564413442.jpg"
         />
         <input
+          required
+          [class.error]="animalImage.invalid && animalImage.touched"
+          pattern="[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"
           type="url"
           class="form-control"
           id="image-input"
@@ -26,6 +29,9 @@
     <div class="mb-3">
       <label for="exampleInputName" class="form-label">Name</label><br />
       <input
+        required
+        [class.error]="animalName.invalid && animalName.touched"
+        pattern="[a-zA-Z]*"
         type="text"
         name="animalname"
         class="form-control"
@@ -34,10 +40,19 @@
         [(ngModel)]="animal.animalName"
       />
     </div>
+    <div
+      [hidden]="animalName.valid || animalName.pristine"
+      class="alert alert-danger"
+    >
+      Name field must be filled in!
+    </div>
 
     <div class="mb-3">
       <label for="exampleInputAge" class="form-label">Age</label><br />
       <input
+        required
+        [class.error]="animalAge.invalid && animalAge.touched"
+        pattern="^[0-9]+$"
         type="number"
         name="animalage"
         class="form-control"
@@ -46,10 +61,19 @@
         [(ngModel)]="animal.animalAge"
       />
     </div>
+    <div
+      [hidden]="animalAge.valid || animalAge.pristine"
+      class="alert alert-danger"
+    >
+      Age field must be be filled in!
+    </div>
 
     <div class="mb-3">
       <label for="exampleInputSpecies" class="form-label">Species</label><br />
       <input
+        required
+        [class.error]="animalSpecies.invalid && animalSpecies.touched"
+        pattern="[a-zA-Z]*"
         type="text"
         name="animalspecies"
         class="form-control"
@@ -58,10 +82,19 @@
         [(ngModel)]="animal.animalSpecies"
       />
     </div>
+    <div
+      [hidden]="animalSpecies.valid || animalSpecies.pristine"
+      class="alert alert-danger"
+    >
+      Species field must be filled in!
+    </div>
 
     <div class="mb-3">
       <label for="exampleInputClass" class="form-label">Class</label>
       <select
+        required
+        [class.error]="animalClass.invalid && animalClass.touched"
+        pattern="[a-zA-Z]*"
         class="form-select"
         name="animalClass"
         id="exampleInputClass"
@@ -74,10 +107,19 @@
         </option>
       </select>
     </div>
+    <div
+      [hidden]="animalClass.valid || animalClass.pristine"
+      class="alert alert-danger"
+    >
+      Class must be selected!
+    </div>
 
     <div class="mb-3">
       <label for="exampleInputFood" class="form-label">Favourite food</label>
       <input
+        required
+        [class.error]="animalFood.invalid && animalFood.touched"
+        pattern="[a-zA-Z]*"
         type="text"
         name="favFood"
         class="form-control"
@@ -85,6 +127,12 @@
         #animalFood="ngModel"
         [(ngModel)]="animal.animalFood"
       />
+    </div>
+    <div
+      [hidden]="animalFood.valid || animalFood.pristine"
+      class="alert alert-danger"
+    >
+      Favourite food must be filled in!
     </div>
 
     <div class="mb-3">
