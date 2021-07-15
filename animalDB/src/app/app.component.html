@@ -3,7 +3,7 @@
 <div class="container">
   <h3 class="app-title">Zoo of Losers</h3>
 
-  <form #formName="ngForm">
+  <form #formName="ngForm" novalidate>
     <div class="mb-3">
       <label for="exampleInputImage" class="form-label">Image</label><br />
       <div class="image-upload">
@@ -136,7 +136,13 @@
     </div>
 
     <div class="mb-3">
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        [disabled]="formName.invalid"
+      >
+        Submit
+      </button>
     </div>
   </form>
 </div>
