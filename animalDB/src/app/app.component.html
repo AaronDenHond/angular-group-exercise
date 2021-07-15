@@ -1,4 +1,4 @@
-{{ formName.value | json }}
+{{ animal | json }}
 
 <div class="container">
   <h3 class="app-title">Zoo of Losers</h3>
@@ -7,27 +7,56 @@
     <div class="mb-3">
       <label for="exampleInputImage" class="form-label">Image</label><br />
       <div class="image-upload">
-          <img class="zoo-image" id="exampleInputImage"
-               src="https://d2lv662meabn0u.cloudfront.net/boomerang/dynamic/show/00000000/988/5e40a28bfc21629a2b42073994667591498da014_1564413442.jpg"
-          />
-        <input type="url" class="form-control" id="image-input"
-               #animalImage="ngModel" name="animalimage" ngModel>
+        <img
+          class="zoo-image"
+          id="exampleInputImage"
+          src="https://d2lv662meabn0u.cloudfront.net/boomerang/dynamic/show/00000000/988/5e40a28bfc21629a2b42073994667591498da014_1564413442.jpg"
+        />
+        <input
+          type="url"
+          class="form-control"
+          id="image-input"
+          #animalImage="ngModel"
+          name="animalimage"
+          [(ngModel)]="animal.animalImage"
+        />
       </div>
     </div>
 
     <div class="mb-3">
       <label for="exampleInputName" class="form-label">Name</label><br />
-      <input type="text" name="animalname" class="form-control" id="exampleInputName" #animalName="ngModel" ngModel > <!--[(ngModel)]="animalName"--> 
+      <input
+        type="text"
+        name="animalname"
+        class="form-control"
+        id="exampleInputName"
+        #animalName="ngModel"
+        [(ngModel)]="animal.animalName"
+      />
     </div>
 
     <div class="mb-3">
       <label for="exampleInputAge" class="form-label">Age</label><br />
-      <input type="number" name="animalage" class="form-control" id="exampleInputAge" #animalAge='ngModel' ngModel><!--[(ngModel)]="animalAge"-->
+      <input
+        type="number"
+        name="animalage"
+        class="form-control"
+        id="exampleInputAge"
+        #animalAge="ngModel"
+        [(ngModel)]="animal.animalAge"
+      />
     </div>
 
     <div class="mb-3">
       <label for="exampleInputSpecies" class="form-label">Species</label><br />
-      <input type="text" name="animalspecies" class="form-control" id="exampleInputSpecies" #animalSpecies='ngModel' ngModel ><!-- [(ngModel)]="animalSpecies"-->
+      <input
+        type="text"
+        name="animalspecies"
+        class="form-control"
+        id="exampleInputSpecies"
+        #animalSpecies="ngModel"
+        [(ngModel)]="animal.animalSpecies"
+      />
     </div>
 
     <div class="mb-3">
@@ -37,8 +66,9 @@
         name="animalClass"
         id="exampleInputClass"
         name="animalClass"
-        #animalClass='ngModel' ngModel>
-        <!--[(ngModel)]="animalClass">-->
+        #animalClass="ngModel"
+        [(ngModel)]="animal.animalClass"
+      >
         <option *ngFor="let animalClass of animalClasses">
           {{ animalClass }}
         </option>
@@ -46,8 +76,15 @@
     </div>
 
     <div class="mb-3">
-      <label for="exampleInputFood"  class="form-label">Favourite food</label>
-      <input type="text" name="favFood" class="form-control" id="exampleInputFood" #animalFood='ngModel' ngModel> <!--[(ngModel)]="animalFood"-->
+      <label for="exampleInputFood" class="form-label">Favourite food</label>
+      <input
+        type="text"
+        name="favFood"
+        class="form-control"
+        id="exampleInputFood"
+        #animalFood="ngModel"
+        [(ngModel)]="animal.animalFood"
+      />
     </div>
 
     <div class="mb-3">
