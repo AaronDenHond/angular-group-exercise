@@ -9,7 +9,7 @@ export class AddAnimalService {
 
   constructor( private _http: HttpClient) {}
 
-  url = '';
+  url = 'http://localhost:9100/addAnimal';
 
   addAnimal(animal : Animal) {
     return this._http.post<any>(this.url, animal)

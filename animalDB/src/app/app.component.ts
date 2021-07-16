@@ -13,13 +13,13 @@ export class AppComponent implements OnInit {
   title = 'Zoo of Losers';
   animalClasses: any = ['Mammal', 'Amphibian', 'Bird', 'Reptiles', 'Insects'];
 
-  animal = new Animal('', '', 0, '', '', '');
+  animal = new Animal('', '', '', '', '', '');
 
   constructor(private addAnimalService : AddAnimalService) {
   }
 
   ngOnInit() : any {
-    this.getAllAnimals('') // have to call the function with url/allAnimals
+    this.getAllAnimals('http://localhost:9100/allAnimals') // have to call the function with url/allAnimals
     // console.log(this.allAnimals);
   }
 
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
       error => console.log('It did not work', error)
     )
 
-    this.getAllAnimals('');
+    this.getAllAnimals('http://localhost:9100/allAnimals');
   }
 
   public async getAllAnimals (url : string) : Promise <any> {

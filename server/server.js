@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-const PORT = 4500;
+const PORT = 9100;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}) );
@@ -15,7 +15,7 @@ app.all("/*", function(req, res, next){
 });
 
 
-let allFriends = [{fName: 'Coach', lName: 'Tim', email: 'tim.broos@becode.org', phone: '0469420666', signatureMove: 'Yeet', language: 'Javascript'}];
+let allAnimals = [{image: '',Name: 'Harold the Lion', age: '2', species: 'lion', class: 'mammal', food: 'zebra'}];
 
 // Below you can define how your API handles a get or a post request.
 // Try sending a get request to the root, you should get a "Hello from server" back.
@@ -23,18 +23,18 @@ let allFriends = [{fName: 'Coach', lName: 'Tim', email: 'tim.broos@becode.org', 
 app.get('/', function (request, response) {
     response.send('Hello from server');
 });
-// get for allFriends
-app.get('/allFriends', function (request, response ) {
-    response.send(allFriends);
+// get for allAnimals
+app.get('/allAnimals', function (request, response ) {
+    response.send(allAnimals);
 });
 
 app.post('/', function (request, response) {
     response.status(200).send({"message": "Data received"});
 });
 
-//push to allFriends
-app.post('/addFriend', function (request, response) {
-    allFriends.push(request.body);
+//push to allAnimals
+app.post('/addAnimal', function (request, response) {
+    allAnimals.push(request.body);
     response.status(200).send({"message": "Data received"});
 });
 

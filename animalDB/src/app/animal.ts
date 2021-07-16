@@ -1,7 +1,7 @@
 export class Animal {
   animalImage: string;
   animalName: string;
-  animalAge: number;
+  animalAge: string;
   animalSpecies: string;
   animalClass: string;
   animalFood: string;
@@ -9,7 +9,7 @@ export class Animal {
   public constructor(
     animalImage: string,
     animalName: string,
-    animalAge: number,
+    animalAge: string,
     animalSpecies: string,
     animalClass: string,
     animalFood: string
