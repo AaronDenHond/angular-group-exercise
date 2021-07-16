@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Animal } from './animal';
-import { AddAnimalService } from './add-animal.service';
+import {Component, OnInit} from '@angular/core';
+import {Animal} from './animal';
+import {AddAnimalService} from './add-animal.service';
 import {
   trigger,
   state,
@@ -39,12 +39,14 @@ export class AppComponent implements OnInit {
 
   animal = new Animal('', '', '', '', '', '');
 
-  constructor(private addAnimalService: AddAnimalService) {}
+  constructor(private addAnimalService: AddAnimalService) {
+  }
 
   ngOnInit(): any {
     this.getAllAnimals('http://localhost:9100/allAnimals'); // have to call the function with url/allAnimals
     // console.log(this.allAnimals);
   }
+
   flip: string = 'inactive';
 
   toggleFlip() {
@@ -63,11 +65,15 @@ export class AppComponent implements OnInit {
   public async getAllAnimals(url: string): Promise<any> {
     return await fetch(url, {
       method: 'GET',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {'Content-Type': 'application/json'},
     })
       .then((response) => {
         return response.json();
       })
-      .then((data) => (this.allAnimals = data));
+      .then((data) => {
+        this.allAnimals = data;
+        console.log(data);
+      });
+
   }
 }

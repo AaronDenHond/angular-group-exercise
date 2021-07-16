@@ -1,21 +1,14 @@
-{{ animal | json }}
-
+<!--{{ animal | json }}-->
+<div class="big-container">
 <div class="container">
-  <h3 class="app-title">Zoo of Losers</h3>
+  <h3 class="app-title">Animals record</h3>
 
   <form #formName="ngForm" (ngSubmit)="onSubmit()" novalidate>
     <div class="mb-3">
-      <label for="exampleInputImage" class="form-label">Image</label><br />
-      <div class="image-upload">
-        <img
-          class="zoo-image"
-          id="exampleInputImage"
-          src="https://d2lv662meabn0u.cloudfront.net/boomerang/dynamic/show/00000000/988/5e40a28bfc21629a2b42073994667591498da014_1564413442.jpg"
-        />
+      <label class="form-label">Image</label><br/>
         <input
           required
           [class.error]="animalImage.invalid && animalImage.touched"
-          pattern="[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)"
           type="url"
           class="form-control"
           id="image-input"
@@ -24,10 +17,9 @@
           [(ngModel)]="animal.animalImage"
         />
       </div>
-    </div>
 
     <div class="mb-3">
-      <label for="exampleInputName" class="form-label">Name</label><br />
+      <label for="exampleInputName" class="form-label">Name</label><br/>
       <input
         required
         [class.error]="animalName.invalid && animalName.touched"
@@ -48,7 +40,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="exampleInputAge" class="form-label">Age</label><br />
+      <label for="exampleInputAge" class="form-label">Age</label><br/>
       <input
         required
         [class.error]="animalAge.invalid && animalAge.touched"
@@ -69,7 +61,7 @@
     </div>
 
     <div class="mb-3">
-      <label for="exampleInputSpecies" class="form-label">Species</label><br />
+      <label for="exampleInputSpecies" class="form-label">Species</label><br/>
       <input
         required
         [class.error]="animalSpecies.invalid && animalSpecies.touched"
@@ -130,8 +122,7 @@
     </div>
     <div
       [hidden]="animalFood.valid || animalFood.pristine"
-      class="alert alert-danger"
-    >
+      class="alert alert-danger">
       Favourite food must be filled in!
     </div>
 
@@ -145,11 +136,25 @@
       </button>
     </div>
   </form>
+
 </div>
 
-<div class="tp-wrapper">
-  <div class="tp-box" (click)="toggleFlip()" [@flipState]="flip">
-    <div class="tp-box__side tp-box__front">Front</div>
-    <div class="tp-box__side tp-box__back">Back</div>
-  </div>
+    <h3 class="list-title"> Current residents: </h3>
+    <div class="friends-flex">
+      <div class="friends-flex" *ngFor="let animal of allAnimals">
+        <div class="tp-box" (click)="toggleFlip()" [@flipState]="flip">
+          <img [src]='animal.animalImage' class="tp-box__side tp-box__front"/>
+          <div class="tp-box__side tp-box__back">
+              <p class="returns"><strong>Name: </strong> {{animal.animalName}}</p>
+              <p class="returns"><strong>Age: </strong> {{animal.animalAge}}
+              <p class="returns"><strong>Animal species: </strong> {{animal.animalSpecies}}</p>
+              <p class="returns"><strong>Class: </strong> {{animal.animalClass}}</p>
+              <p class="returns"><strong>Favourite food: </strong> {{animal.animalFood}}</p> <br>
+            </div>
+          </div>
+        </div>
+      </div>
 </div>
+
+
+

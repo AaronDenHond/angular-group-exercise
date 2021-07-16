@@ -1,16 +1,23 @@
+
 .container {
   width: 300px;
-  margin-top: 50px;
+  margin-top: 5px;
   margin-left: 20px;
+  margin-right: 20px;
   text-align: left;
-  background-color: whitesmoke;
+  background: url("https://bit.ly/3iopWno");
   border: 1px solid grey;
   border-radius: 5px;
-  float: left;
+  float: left
 }
 
 .app-title {
   margin: 20px;
+  text-align: center;
+}
+
+.form-label {
+  font-weight: bold;
 }
 
 .error {
@@ -21,67 +28,38 @@ button {
   text-align: center;
 }
 
-.animal-box {
-  margin-left: 50px;
-}
 
-.animal-flex {
-  margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.animal {
-  margin-bottom: 25px;
-  margin-left: 25px;
-  border: 2px solid aliceblue;
-  border-radius: 5px;
-  padding: 15px;
-  width: 280px;
-  height: 200px;
-  box-shadow: 2px 5px aliceblue;
-}
-
-h3.list-title {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.zoo-image {
-  height: 200px;
-  width: 280px;
-}
-
-/* imported css */
+/* boxes css */
 .tp-wrapper {
   -webkit-perspective: 800px;
   perspective: 800px;
 }
 
 .tp-box {
+  background-color: antiquewhite;
   position: relative;
-  width: 200px;
-  height: 100px;
-  margin: 3rem auto;
+  width: 250px;
+  height: 250px;
+  margin: 5px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transform: transform 1s;
+  -webkit-transform: trnsform 1s;
   -ms-transform: transform 1s;
   transform: transform 1s;
+
 }
 .tp-box__side {
   width: 100%;
   height: 100%;
   position: absolute;
-
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-
-  color: #fff;
+  color: black;
   text-align: center;
-  line-height: 100px;
-  font-size: 24px;
-  font-weight: 700;
+  line-height: 20px;
+  font-size: 12px;
+  font-weight: 50;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -89,14 +67,46 @@ h3.list-title {
   user-select: none;
 }
 .tp-box__front {
-  background: green;
   -webkit-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
   transform: rotateY(0deg);
+
 }
 .tp-box__back {
-  background: #23262d;
+  background-color: limegreen;
   -webkit-transform: rotateY(-180deg);
   -ms-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
+
+.returns {
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 5px;
+  font-size: 20px;
+}
+
+.friends-flex {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.friend {
+  margin-bottom: 25px;
+  margin-left: 25px;
+  border: 2px solid aliceblue;
+  border-radius: 5px;
+  padding: 15px;
+  width: 400px;
+  height: 400px;
+  box-shadow: 2px 5px aliceblue;
+
+}
+
+h3.list-title {
+  text-align: center;
+  margin-top: 30px;
+}
+
+

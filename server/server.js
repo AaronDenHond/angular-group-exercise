@@ -38,7 +38,7 @@ app.get('/', function (request, response) {
 // get for allAnimals
 app.get('/allAnimals', function (request, response ) {
     let allAnimals= readData();
-    response.send(allAnimals);
+    response.send(allAnimals.data);
 });
 
 app.post('/', function (request, response) {
