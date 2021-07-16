@@ -1,12 +1,21 @@
 {
   "data": [
     {
-      "animalImage": "",
+      "animalImage": "https://bit.ly/2UiQgaj",
       "animalName": "Harold the Lion",
       "animalAge": "2",
       "animalSpecies": "lion",
       "animalClass": "mammal",
       "animalFood": "zebra"
+    },
+    {
+      "animalImage": "https://bit.ly/3eqGeec",
+      "animalName": "Jerry",
+      "animalAge": 2,
+      "animalSpecies": "Mouse",
+      "animalClass": "Mammal",
+      "animalFood": "cheese"
     }
+
   ]
 }
