@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
+const fs = require('fs');
 
 const PORT = 9100;
 
@@ -14,8 +15,19 @@ app.all("/*", function(req, res, next){
     next();
 });
 
+function readData() {
+    let rawdata = fs.readFileSync('data/animals.json');
+    let animal = JSON.parse(rawdata);
+    console.log(animal);
+    return animal;
+}
 
-let allAnimals = [{image: '',Name: 'Harold the Lion', age: '2', species: 'lion', class: 'mammal', food: 'zebra'}];
+function writeData(animal) {
+    let allAnimals = readData();
+    allAnimals.data.push(animal);
+    let data = JSON.stringify(allAnimals);
+    fs.writeFileSync('data/animals.json', data);
+}
 
 // Below you can define how your API handles a get or a post request.
 // Try sending a get request to the root, you should get a "Hello from server" back.
@@ -25,6 +37,7 @@ app.get('/', function (request, response) {
 });
 // get for allAnimals
 app.get('/allAnimals', function (request, response ) {
+    let allAnimals= readData();
     response.send(allAnimals);
 });
 
@@ -34,7 +47,7 @@ app.post('/', function (request, response) {
 
 //push to allAnimals
 app.post('/addAnimal', function (request, response) {
-    allAnimals.push(request.body);
+    writeData(request.body);
     response.status(200).send({"message": "Data received"});
 });
 

@@ -1,0 +1,13 @@
+{
+  "data": [
+    {
+      "animalImage": "",
+      "animalName": "Harold the Lion",
+      "animalAge": "2",
+      "animalSpecies": "lion",
+      "animalClass": "mammal",
+      "animalFood": "zebra"
+    }
+
+  ]
+}
