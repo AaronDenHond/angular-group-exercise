@@ -1,5 +1,7 @@
 # angular-group-exercise
 
+Our project steps Trello board: https://trello.com/b/tKKBJQhK/agile-board
+
 ## The Mission
 
 Second Angular exercise. Remaking the basic Angular form and adding some personal touches.
@@ -16,7 +18,12 @@ Our project is about animal data and storing them in our ZOO. We will map all an
 ##TO DO : VALENTINA
 
 - Form : two way data-binding
-- Server side functionality
+- Server side functionality:
+    -post our data to a server
+    -send data to your local api
+    -submitting the form, the animal has been added to the list
+    -displaying the newly updated animal list on page
+  
 
 ### Must-have features
 
@@ -57,4 +64,6 @@ _A form with different input fields :_
 
 9. Error reporting [x]
 
-10. Submitting the data to the server []
+10. Submitting the data to the server [x]
+
+11. Displaying data in cards on page, 
