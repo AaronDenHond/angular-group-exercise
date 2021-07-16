@@ -19,11 +19,10 @@ Our project is about animal data and storing them in our ZOO. We will map all an
 
 - Form : two way data-binding
 - Server side functionality:
-    -post our data to a server
-    -send data to your local api
-    -submitting the form, the animal has been added to the list
-    -displaying the newly updated animal list on page
-  
+  -post our data to a server
+  -send data to your local api
+  -submitting the form, the animal has been added to the list
+  -displaying the newly updated animal list on page
 
 ### Must-have features
 
@@ -66,4 +65,8 @@ _A form with different input fields :_
 
 10. Submitting the data to the server [x]
 
-11. Displaying data in cards on page, 
+11. Storing the data in a file via an array of objects (thanks Sicco!) [x]
+
+12. Added a flip animation for cards [x]
+
+13. Displaying all our saved animal data in cards [ ]
