@@ -71,7 +71,7 @@ _A form with different input fields :_
 
 13. Displaying all our saved animal data in cards [ ]
 
-These are just snapshots of finished project, CSS can be better for sure, will work on it. 
+# These are just snapshots of finished project, CSS can be better for sure, will work on it. 
 
 ![Finished project](/images/animals.png)
 ![Finished project](/images/back.png)
