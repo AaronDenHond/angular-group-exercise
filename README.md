@@ -45,31 +45,31 @@ _A form with different input fields :_
 
 ### Project Plan
 
-1. Create a repo and share access. Setup Git rules (no random pushing) - [x]
+-[x] Create a repo and share access. Setup Git rules (no random pushing)
 
-2. Find a project idea, setup trello with to dos and update readme - [x]
+-[x] Find a project idea, setup trello with to dos and update readme
 
-3. Divide up tasks, but still work together - [x]
+-[x] Divide up tasks, but still work together
 
-4. Setup boilerplate for project - [x]
+-[x] Setup boilerplate for project
 
-5. Create basic HTML form structure - [x]
+-[x] Create basic HTML form structure
 
-6. Create animal class and export - [x]
+-[x] Create animal class and export
 
-7. Bind data to form - [x]
+-[x] Bind data to form
 
-8. Form validation - [x]
+-[x] Form validation
 
-9. Error reporting - [x]
+-[x] Error reporting
 
-10. Submitting the data to the server - [x]
+-[x] Submitting the data to the server
 
-11. Storing the data in a file via an array of objects (thanks Sicco!) - [x]
+-[x] Storing the data in a file via an array of objects (thanks Sicco!)
 
-12. Added a flip animation for cards - [x]
+-[x] Added a flip animation for cards
 
-13. Displaying all our saved animal data in cards - [x]
+-[x] Displaying all our saved animal data in cards
 
 ## These are just snapshots of finished project, CSS can be better for sure, will work on it.
 
